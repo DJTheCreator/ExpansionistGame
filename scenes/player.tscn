@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://8b6t7dp7wueg"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_0232c"]
+[ext_resource type="Texture2D" uid="uid://b2k7a2r20ji7f" path="res://Dungeon_Tileset.png" id="2_boeo0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4kau"]
+size = Vector2(10, 11)
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_0232c")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_r4kau")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_boeo0")
+region_enabled = true
+region_rect = Rect2(112, 144, 16, 16)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.5, 3.5)

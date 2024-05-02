@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/SimpleRandomWalkDungeonGenerator.gd" id="2_qt65p"]
 [ext_resource type="Script" path="res://scripts/TilemapVisualizer.gd" id="4_pnrvr"]
 [ext_resource type="Script" path="res://scripts/WallGenerator.gd" id="4_qxp47"]
-[ext_resource type="Script" path="res://scripts/Player.gd" id="5_2dtyl"]
+[ext_resource type="PackedScene" uid="uid://8b6t7dp7wueg" path="res://scenes/player.tscn" id="6_6mbqs"]
 [ext_resource type="Script" path="res://scripts/GenerateDungeonButton.gd" id="6_rp8r8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tx0aq"]
@@ -130,24 +130,15 @@ wall_tile = Vector2i(1, 0)
 [node name="WallGenerator" type="Node2D" parent="."]
 script = ExtResource("4_qxp47")
 
-[node name="Player" type="Node2D" parent="."]
-script = ExtResource("5_2dtyl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture_filter = 1
-texture = ExtResource("1_qm8vy")
-region_enabled = true
-region_rect = Rect2(112, 144, 16, 16)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-
-[node name="Button" type="Button" parent="Player/Camera2D" node_paths=PackedStringArray("abstract_dungeon_generator")]
-offset_left = 364.0
-offset_top = -250.0
-offset_right = 462.0
-offset_bottom = -187.0
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("abstract_dungeon_generator")]
+offset_left = 68.0
+offset_top = -81.0
+offset_right = 148.0
+offset_bottom = -50.0
 text = "Generate"
 script = ExtResource("6_rp8r8")
-abstract_dungeon_generator = NodePath("../../../SimpleRandomWalkDungeonGenerator")
+abstract_dungeon_generator = NodePath("../SimpleRandomWalkDungeonGenerator")
 
-[connection signal="pressed" from="Player/Camera2D/Button" to="Player/Camera2D/Button" method="_on_pressed"]
+[node name="Player" parent="." instance=ExtResource("6_6mbqs")]
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
