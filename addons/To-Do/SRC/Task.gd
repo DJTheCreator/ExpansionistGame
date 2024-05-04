@@ -44,6 +44,19 @@ func _on_CheckBox_toggled(button_pressed):
 	completed = button_pressed
 	emit_signal("state_changed")
 
+func _on_up_button_pressed():
+	if not data.is_empty():
+		if not data.ranking == 0:
+			data["ranking"] = data.ranking-1
+		else:
+			return
+	emit_signal("state_changed")
+
+
+func _on_down_button_pressed():
+	if not data.is_empty():
+		data["ranking"] = data.ranking+1
+	emit_signal("state_changed")
 
 func _on_DeleteButton_pressed():
 #	emit_signal("state_changed")
@@ -70,6 +83,3 @@ func _on_InfoButton_pressed():
 	
 	$"../../..".add_child(ins)
 
-
-func _on_up_button_pressed():
-	pass # Replace with function body.

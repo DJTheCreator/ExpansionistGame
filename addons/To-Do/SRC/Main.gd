@@ -43,7 +43,7 @@ func _on_AddButton_pressed():
 func sort_tasks() :
 	save_changes()
 	var tasks = _load(tasks_save_path)
-	tasks.sort_custom(sort_by_completed)
+	tasks.sort_custom(sort_by_ranking)
 	#removes unsorted tasks
 	for c in tasks_v_box.get_children() :
 		c.queue_free()
@@ -64,6 +64,13 @@ func sort_tasks() :
 func sort_by_completed(a, b)-> bool :
 	##returns true if a is completed but b isn't.
 	if int(a.completed) < int(b.completed) :
+		return true
+	return false
+
+
+func sort_by_ranking(a, b)-> int :
+	##returns true if a has a lower rank than b.
+	if a.data.ranking < b.data.ranking: 
 		return true
 	return false
 

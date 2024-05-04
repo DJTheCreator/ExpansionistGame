@@ -1,24 +1,85 @@
-[gd_scene load_steps=4 format=3 uid="uid://8b6t7dp7wueg"]
+[gd_scene load_steps=12 format=3 uid="uid://8b6t7dp7wueg"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_0232c"]
-[ext_resource type="Texture2D" uid="uid://b2k7a2r20ji7f" path="res://Dungeon_Tileset.png" id="2_boeo0"]
+[ext_resource type="Texture2D" uid="uid://nyx6fteii1e2" path="res://assets/AnimationSheet.png" id="2_ue6wm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qou0j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4kau"]
-size = Vector2(10, 11)
+size = Vector2(10, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avu4s"]
+atlas = ExtResource("2_ue6wm")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2vvk"]
+atlas = ExtResource("2_ue6wm")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63km8"]
+atlas = ExtResource("2_ue6wm")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24pnm"]
+atlas = ExtResource("2_ue6wm")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7krp"]
+atlas = ExtResource("2_ue6wm")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iseuo"]
+atlas = ExtResource("2_ue6wm")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jycqk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avu4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2vvk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63km8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24pnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7krp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iseuo")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_0232c")
+speed = 200
+metadata/_edit_group_ = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 60.0
+physics_material_override = SubResource("PhysicsMaterial_qou0j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(0, 0.5)
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_r4kau")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_boeo0")
-region_enabled = true
-region_rect = Rect2(112, 144, 16, 16)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jycqk")
+animation = &"idle"
+autoplay = "idle"

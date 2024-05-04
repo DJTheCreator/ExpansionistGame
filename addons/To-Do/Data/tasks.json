@@ -1,50 +1,6 @@
 [
 	{
 		"completed": false,
-		"content": "Change movement to left-right",
-		"data": {
-			"addition_time": "2024-05-01 23:40:51",
-			"completion_time": "...",
-			"name": "Change movement to left-right",
-			"ranking": 0,
-			"state": "Incompleted"
-		}
-	},
-	{
-		"completed": false,
-		"content": "Musket Gun",
-		"data": {
-			"addition_time": "2024-05-01 23:40:54",
-			"completion_time": "...",
-			"name": "Musket Gun",
-			"ranking": 0,
-			"state": "Incompleted"
-		}
-	},
-	{
-		"completed": false,
-		"content": "Player gun script",
-		"data": {
-			"addition_time": "2024-05-01 23:40:57",
-			"completion_time": "...",
-			"name": "Player gun script",
-			"ranking": 0,
-			"state": "Incompleted"
-		}
-	},
-	{
-		"completed": false,
-		"content": "Generic gun script",
-		"data": {
-			"addition_time": "2024-05-01 23:41:00",
-			"completion_time": "...",
-			"name": "Generic gun script",
-			"ranking": 0,
-			"state": "Incompleted"
-		}
-	},
-	{
-		"completed": false,
 		"content": "Jumping with gravity",
 		"data": {
 			"addition_time": "2024-05-01 23:41:05",
@@ -56,45 +12,34 @@
 	},
 	{
 		"completed": false,
-		"content": "Add Up/Down Button on Task.tscn",
+		"content": "Musket Gun",
 		"data": {
-			"addition_time": "2024-05-01 23:42:31",
+			"addition_time": "2024-05-01 23:40:54",
 			"completion_time": "...",
-			"name": "Add Up/Down Button on Task.tscn",
-			"ranking": 0,
+			"name": "Musket Gun",
+			"ranking": 1,
 			"state": "Incompleted"
 		}
 	},
 	{
 		"completed": false,
-		"content": "d",
+		"content": "Player gun script",
 		"data": {
-			"addition_time": "2024-05-02 00:06:00",
+			"addition_time": "2024-05-01 23:40:57",
 			"completion_time": "...",
-			"name": "d",
-			"ranking": 0,
+			"name": "Player gun script",
+			"ranking": 1,
 			"state": "Incompleted"
 		}
 	},
 	{
 		"completed": false,
-		"content": "d",
+		"content": "Generic gun script",
 		"data": {
-			"addition_time": "2024-05-02 00:06:06",
+			"addition_time": "2024-05-01 23:41:00",
 			"completion_time": "...",
-			"name": "d",
-			"ranking": 0,
-			"state": "Incompleted"
-		}
-	},
-	{
-		"completed": false,
-		"content": "d",
-		"data": {
-			"addition_time": "2024-05-02 00:06:23",
-			"completion_time": "...",
-			"name": "d",
-			"ranking": 0,
+			"name": "Generic gun script",
+			"ranking": 1,
 			"state": "Incompleted"
 		}
 	}

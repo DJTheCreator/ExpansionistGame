@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3iv324pudfmk"]
+[gd_scene load_steps=6 format=3 uid="uid://b3iv324pudfmk"]
 
 [ext_resource type="Script" path="res://addons/To-Do/SRC/Task.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cxxiv7gh6lpuq" path="res://addons/To-Do/Icons/Remove.svg" id="2"]
+[ext_resource type="Texture2D" uid="uid://bk8bah8wten3i" path="res://addons/To-Do/Icons/Up.svg" id="2_iefjf"]
 [ext_resource type="Texture2D" uid="uid://cxg2jg1k4c3m" path="res://addons/To-Do/Icons/Info.svg" id="3"]
+[ext_resource type="Texture2D" uid="uid://cd2p6nb5nsmx2" path="res://addons/To-Do/Icons/Down.svg" id="3_twwpv"]
 
 [node name="Task" type="HBoxContainer"]
 size_flags_horizontal = 3
@@ -18,11 +20,29 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 expand_to_text_length = true
 
+[node name="UpButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.02
+icon = ExtResource("2_iefjf")
+icon_alignment = 1
+expand_icon = true
+
+[node name="DownButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.02
+icon = ExtResource("3_twwpv")
+icon_alignment = 1
+expand_icon = true
+
 [node name="InfoButton" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.05
+size_flags_stretch_ratio = 0.03
 icon = ExtResource("3")
 expand_icon = true
 
@@ -36,5 +56,7 @@ expand_icon = true
 
 [connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]
 [connection signal="text_changed" from="LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="pressed" from="UpButton" to="." method="_on_up_button_pressed"]
+[connection signal="pressed" from="DownButton" to="." method="_on_down_button_pressed"]
 [connection signal="pressed" from="InfoButton" to="." method="_on_InfoButton_pressed"]
 [connection signal="pressed" from="DeleteButton" to="." method="_on_DeleteButton_pressed"]
