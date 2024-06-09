@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://mwd8w0bat06k"]
+[gd_scene load_steps=9 format=3 uid="uid://mwd8w0bat06k"]
 
 [ext_resource type="PackedScene" uid="uid://8b6t7dp7wueg" path="res://scenes/player.tscn" id="1_qoiuc"]
+[ext_resource type="Script" path="res://scripts/GenericFirearm.gd" id="2_4sebu"]
 [ext_resource type="Texture2D" uid="uid://crea7t4eshcwg" path="res://assets/rock_straight.png" id="2_8ut4e"]
 [ext_resource type="Texture2D" uid="uid://b2k7a2r20ji7f" path="res://Dungeon_Tileset.png" id="3_y84vt"]
 
@@ -9,10 +10,11 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oilyk"]
 resource_name = "Rock"
 texture = ExtResource("2_8ut4e")
+texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3, 8, 3, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -6, 16, -6, 16, 16, -16, 16)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -339,6 +341,7 @@ texture = ExtResource("3_y84vt")
 2:10/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_l5v4d"]
+tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_xl1ch")
 sources/1 = SubResource("TileSetAtlasSource_oilyk")
@@ -346,12 +349,33 @@ sources/2 = SubResource("TileSetAtlasSource_umm6y")
 
 [node name="TestLevel" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_qoiuc")]
-position = Vector2(-1, -9)
+[node name="Player" parent="." node_paths=PackedStringArray("player_gun") instance=ExtResource("1_qoiuc")]
+position = Vector2(0, -47)
+player_gun = NodePath("GenericFirearm")
+
+[node name="GenericFirearm" type="Node2D" parent="Player" node_paths=PackedStringArray("ammotext")]
+script = ExtResource("2_4sebu")
+ammotext = NodePath("AmmoText")
+
+[node name="AmmoText" type="TextEdit" parent="Player/GenericFirearm"]
+offset_left = -159.0
+offset_top = -90.0
+offset_right = -59.0
+offset_bottom = -62.0
+theme_override_font_sizes/font_size = 10
+text = "Ammo: "
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_l5v4d")
 rendering_quadrant_size = 32
 collision_animatable = true
 format = 2
-layer_0/tile_data = PackedInt32Array(65534, 1, 0, 131070, 1, 1, 65535, 65537, 0, 131071, 65537, 1, 0, 1, 0, 65536, 1, 1, 1, 65537, 0, 65537, 65537, 1, 2, 1, 0, 65538, 1, 1, 3, 65537, 0, 65539, 65537, 1, 4, 1, 0, 65540, 1, 1, 5, 65537, 0, 65541, 65537, 1, 65532, 1, 0, 131068, 1, 1, 65533, 65537, 0, 131069, 65537, 1, 65531, 65537, 0, 131067, 65537, 1, 65530, 1, 0, 131066, 1, 1, 6, 1, 0, 65542, 1, 1, 7, 65537, 0, 65543, 65537, 1)
+layer_0/tile_data = PackedInt32Array(5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 10, 1, 0, 9, 1, 0, 4, 1, 0, 3, 1, 0, 2, 1, 0, 1, 1, 0, 0, 1, 0, 65535, 1, 0, 65534, 1, 0, 65533, 1, 0, 65532, 1, 0, 65531, 1, 0, 65530, 1, 0, 65529, 1, 0, 11, 1, 0, 65528, 1, 0, 65527, 1, 0, 65526, 1, 0)
