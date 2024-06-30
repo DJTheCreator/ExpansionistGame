@@ -1,0 +1,343 @@
+[gd_scene load_steps=2 format=3 uid="uid://1txp3rmelkqp"]
+
+[ext_resource type="Texture2D" uid="uid://xjkdhbo7u44m" path="res://assets/icon.svg" id="1_66cj1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -607.0
+offset_top = -330.0
+offset_right = 600.0
+offset_bottom = 330.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 1.0
+offset_right = 638.0
+offset_bottom = 659.0
+texture = ExtResource("1_66cj1")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 125.0
+offset_right = 1184.0
+offset_bottom = 651.0
+tabs_visible = false
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer"]
+layout_direction = 3
+layout_mode = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton" type="TextureButton" parent="TabContainer/GridContainer/TextureButton"]
+layout_mode = 0
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton2" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton3" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton4" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton5" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton6" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton10" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton12" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton13" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton14" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton15" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton16" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton17" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton18" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton19" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton20" type="TextureButton" parent="TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="GridContainer2" type="GridContainer" parent="TabContainer"]
+visible = false
+layout_direction = 3
+layout_mode = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton2" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton3" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton4" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton5" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton6" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton10" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton12" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton13" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton14" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton15" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton16" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton17" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton18" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton19" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton20" type="TextureButton" parent="TabContainer/GridContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="GridContainer3" type="GridContainer" parent="TabContainer"]
+visible = false
+layout_direction = 3
+layout_mode = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton2" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton3" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton4" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton5" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton6" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton10" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton12" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton13" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton14" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton15" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton16" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton17" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton18" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton19" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton20" type="TextureButton" parent="TabContainer/GridContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="GridContainer4" type="GridContainer" parent="TabContainer"]
+visible = false
+layout_direction = 3
+layout_mode = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton2" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton3" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton4" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton5" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton6" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton10" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton12" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton13" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton14" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton15" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton16" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton17" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton18" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton19" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton20" type="TextureButton" parent="TabContainer/GridContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 659.0
+offset_top = -6.0
+offset_right = 1183.0
+offset_bottom = 122.0
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="TextureButton4" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_66cj1")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -42.0
+offset_top = -17.0
+offset_right = 1204.0
+offset_bottom = 676.0
+texture = ExtResource("1_66cj1")

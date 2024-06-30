@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ds2ap3j56anjw"]
 
-[ext_resource type="Texture2D" uid="uid://b2k7a2r20ji7f" path="res://Dungeon_Tileset.png" id="1_qm8vy"]
+[ext_resource type="Texture2D" uid="uid://b2k7a2r20ji7f" path="res://assets/Dungeon_Tileset.png" id="1_qm8vy"]
 [ext_resource type="Script" path="res://scripts/SimpleRandomWalkDungeonGenerator.gd" id="2_qt65p"]
 [ext_resource type="Script" path="res://scripts/TilemapVisualizer.gd" id="4_pnrvr"]
 [ext_resource type="Script" path="res://scripts/WallGenerator.gd" id="4_qxp47"]
