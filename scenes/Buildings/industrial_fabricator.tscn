@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ufn3qbtdfs48"]
+
+[ext_resource type="Texture2D" uid="uid://dx5mgdvyos1x" path="res://assets/Crafting_Station_Temp.png" id="1_mw6vr"]
+[ext_resource type="Script" path="res://scripts/Buildings/Industrial_Fabricator.gd" id="1_rfuvy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wx1j0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mw6vr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swotc"]
+size = Vector2(180, 126)
+
+[node name="Industrial Fabricator" type="Area2D"]
+script = ExtResource("1_rfuvy")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_wx1j0")
+
+[node name="DetectionArea" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("RectangleShape2D_swotc")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

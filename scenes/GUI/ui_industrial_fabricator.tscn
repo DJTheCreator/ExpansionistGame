@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://b1o2e4lci2rn8"]
+
+[node name="UI Industrial Fabricator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.106
+anchor_bottom = 0.091
+offset_right = -0.112007
+offset_bottom = 0.0319977
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Crafting Station"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2

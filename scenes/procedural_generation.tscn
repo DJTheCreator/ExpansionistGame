@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/SimpleRandomWalkDungeonGenerator.gd" id="2_qt65p"]
 [ext_resource type="Script" path="res://scripts/TilemapVisualizer.gd" id="4_pnrvr"]
 [ext_resource type="Script" path="res://scripts/WallGenerator.gd" id="4_qxp47"]
-[ext_resource type="PackedScene" uid="uid://pmftp4d3juos" path="res://scenes/player.tscn" id="6_6mbqs"]
+[ext_resource type="PackedScene" uid="uid://8b6t7dp7wueg" path="res://scenes/player.tscn" id="6_6mbqs"]
 [ext_resource type="Script" path="res://scripts/GenerateDungeonButton.gd" id="6_rp8r8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tx0aq"]

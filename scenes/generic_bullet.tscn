@@ -8,6 +8,7 @@ size = Vector2(1, 1)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1aqcu"]
 
 [node name="GenericBullet" type="Area2D"]
+collision_layer = 0
 script = ExtResource("1_5noou")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -15,3 +16,5 @@ shape = SubResource("RectangleShape2D_u18fw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_1aqcu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
