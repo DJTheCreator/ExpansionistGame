@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://8g4v0axhxhyf"]
+
+[ext_resource type="Script" path="res://scripts/Entities/Survivors/GenericSurvivor.gd" id="1_ayw5w"]
+[ext_resource type="Texture2D" uid="uid://nyx6fteii1e2" path="res://assets/AnimationSheet.png" id="2_d7asw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7i0g1"]
+size = Vector2(10, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fss0e"]
+atlas = ExtResource("2_d7asw")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t388g"]
+atlas = ExtResource("2_d7asw")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjgbo"]
+atlas = ExtResource("2_d7asw")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smto7"]
+atlas = ExtResource("2_d7asw")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_od8ms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fss0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t388g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjgbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smto7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 12.0
+}]
+
+[node name="GenericSurvivor" type="CharacterBody2D"]
+script = ExtResource("1_ayw5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_7i0g1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_od8ms")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+debug_path_custom_color = Color(0.891497, 0.000641872, 0.89197, 1)

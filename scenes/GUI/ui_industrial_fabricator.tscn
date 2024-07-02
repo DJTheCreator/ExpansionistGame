@@ -1,64 +1,404 @@
-[gd_scene format=3 uid="uid://b1o2e4lci2rn8"]
+[gd_scene load_steps=4 format=3 uid="uid://1txp3rmelkqp"]
+
+[ext_resource type="Script" path="res://scripts/GUI/ui_industrial_fabricator.gd" id="1_60fx5"]
+[ext_resource type="Texture2D" uid="uid://xjkdhbo7u44m" path="res://assets/icon.svg" id="1_h6wxi"]
+[ext_resource type="Texture2D" uid="uid://dryhgd0qwbilc" path="res://assets/UI/Slot.png" id="3_pkg6k"]
 
 [node name="UI Industrial Fabricator" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1207.0
+offset_bottom = 660.0
+script = ExtResource("1_60fx5")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 623.0
+offset_bottom = 356.0
+texture = ExtResource("1_h6wxi")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.106
-anchor_bottom = 0.091
-offset_right = -0.112007
-offset_bottom = 0.0319977
+offset_right = 608.0
+offset_bottom = 336.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-text = "Crafting Station"
+texture = ExtResource("1_h6wxi")
+expand_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="DefenseButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-columns = 3
+texture_normal = ExtResource("3_pkg6k")
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="OffenseButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="DecorButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
 
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="OtherButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
 
-[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+tabs_visible = false
 
-[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="Defense" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
 layout_mode = 2
+columns = 4
 
-[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
 layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
 
-[node name="Button7" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
 layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
 
-[node name="Button8" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="TextureButton3" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
 layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
 
-[node name="Button9" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="TextureButton4" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
 layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton9" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton10" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton11" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton12" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton13" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton14" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton15" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton16" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Defense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="Offense" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton9" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton10" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton11" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton12" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton13" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton14" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton15" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton16" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Offense"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="Decor" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton9" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton10" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton11" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton12" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton13" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton14" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton15" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton16" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Decor"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="Other" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton9" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton10" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton11" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton12" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton13" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton14" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton15" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[node name="TextureButton16" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer/Other"]
+layout_mode = 2
+texture_normal = ExtResource("3_pkg6k")
+stretch_mode = 0
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/DefenseButton" to="." method="_on_defense_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/OffenseButton" to="." method="_on_offense_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/DecorButton" to="." method="_on_decor_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/OtherButton" to="." method="_on_other_button_pressed"]

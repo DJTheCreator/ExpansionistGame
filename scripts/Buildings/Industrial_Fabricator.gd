@@ -33,11 +33,11 @@ func _on_body_exited(body):
 		player_present = false
 
 func toggle_ui():
-	var camera:Camera2D  = player.get_node("Camera")
-	if camera.get_node("UI Industrial Fabricator"):
-		var ui = camera.get_node("UI Industrial Fabricator")
-		camera.remove_child(ui)
+	var ui_layer = %UICanvasLayer
+	if ui_layer.get_node("UI Industrial Fabricator"):
+		var ui = ui_layer.get_node("UI Industrial Fabricator")
+		ui_layer.remove_child(ui)
 		ui_active = false
 	else:
-		camera.add_child(load("res://scenes/GUI/ui_industrial_fabricator.tscn").instantiate())
+		ui_layer.add_child(load("res://scenes/GUI/ui_industrial_fabricator.tscn").instantiate())
 		ui_active = true

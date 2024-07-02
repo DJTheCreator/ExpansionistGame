@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://mwd8w0bat06k"]
+[gd_scene load_steps=10 format=3 uid="uid://mwd8w0bat06k"]
 
 [ext_resource type="PackedScene" uid="uid://8b6t7dp7wueg" path="res://scenes/player.tscn" id="1_qoiuc"]
 [ext_resource type="Texture2D" uid="uid://crea7t4eshcwg" path="res://assets/rock_straight.png" id="2_8ut4e"]
+[ext_resource type="PackedScene" uid="uid://8g4v0axhxhyf" path="res://scenes/Entities/Survivor/generic_survivor.tscn" id="5_8p7cb"]
 [ext_resource type="PackedScene" uid="uid://ufn3qbtdfs48" path="res://scenes/Buildings/industrial_fabricator.tscn" id="5_156db"]
 [ext_resource type="PackedScene" uid="uid://ceo4422vseqbl" path="res://scenes/Buildings/drill.tscn" id="5_dvwwc"]
 
@@ -380,3 +381,9 @@ position = Vector2(326, -53)
 
 [node name="Crafting_Station" parent="." instance=ExtResource("5_156db")]
 position = Vector2(-135, -52)
+
+[node name="UICanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="GenericSurvivor" parent="." instance=ExtResource("5_8p7cb")]
+position = Vector2(-254, -6)

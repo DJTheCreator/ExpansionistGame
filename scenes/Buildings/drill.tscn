@@ -25,7 +25,6 @@ polygon = PackedVector2Array(-28, -38, -32, 28, -46, 38, -57, 54, -58, 64, 58, 6
 
 [node name="ReleaseOre" type="Timer" parent="."]
 process_callback = 0
-wait_time = 4.0
 
 [node name="OreCounter" type="RichTextLabel" parent="."]
 offset_left = -20.0
