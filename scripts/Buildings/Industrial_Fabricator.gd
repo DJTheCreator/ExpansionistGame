@@ -1,43 +1,11 @@
-extends Area2D
+extends GenericUIBuilding
 
-var player_present
-var player:CharacterBody2D
-var ui_active = false
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	ui_scene_path = "res://scenes/GUI/ui_industrial_fabricator.tscn"
+	ui_node_name = "UI Industrial Fabricator"
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	for body in get_overlapping_bodies():
-		if body.is_in_group("Player"):
-			if body.has_method("set_interactable_object"):
-				player = body
-				player.set_interactable_object(self)
-				player_present = true
-				break
-			# TODO make an icon appear above the hut with the interact key (must depend on the user settings)
-
-
-func is_player_present():
-	return player_present
+	super._process(delta)
 
 func _on_body_exited(body):
-	if body == player:
-		if ui_active:
-			toggle_ui()
-		player.set_interactable_object(null)
-		player = null
-		player_present = false
-
-func toggle_ui():
-	var ui_layer = %UICanvasLayer
-	if ui_layer.get_node("UI Industrial Fabricator"):
-		var ui = ui_layer.get_node("UI Industrial Fabricator")
-		ui_layer.remove_child(ui)
-		ui_active = false
-	else:
-		ui_layer.add_child(load("res://scenes/GUI/ui_industrial_fabricator.tscn").instantiate())
-		ui_active = true
+	super._on_body_exited(body)

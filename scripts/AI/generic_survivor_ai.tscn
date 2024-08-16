@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://jx67ym4bpusd"]
+
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_mle7q"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector.gd" id="2_nr2m4"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence_star.gd" id="2_roklr"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_hqh35"]
+[ext_resource type="Script" path="res://scripts/AI/actions/WalkToDrill.gd" id="4_46xfa"]
+[ext_resource type="Script" path="res://scripts/AI/actions/GatherFromDrill.gd" id="5_y1we3"]
+[ext_resource type="Script" path="res://scripts/AI/actions/WalkToFabricator.gd" id="6_runwu"]
+[ext_resource type="Script" path="res://scripts/AI/conditions/HasHeldItem.gd" id="7_4k3ve"]
+
+[node name="GenericSurvivorAi" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
+script = ExtResource("1_mle7q")
+blackboard = NodePath("@Node@17599")
+actor = NodePath("")
+
+[node name="SelectorComposite" type="Node" parent="."]
+script = ExtResource("2_nr2m4")
+
+[node name="SequenceStarComposite" type="Node" parent="SelectorComposite"]
+script = ExtResource("2_roklr")
+
+[node name="WalkToDrill" type="Node" parent="SelectorComposite/SequenceStarComposite"]
+script = ExtResource("4_46xfa")
+
+[node name="GatherFromDrill" type="Node" parent="SelectorComposite/SequenceStarComposite"]
+script = ExtResource("5_y1we3")
+
+[node name="SequenceComposite" type="Node" parent="SelectorComposite"]
+script = ExtResource("3_hqh35")
+
+[node name="HasHeldItem" type="Node" parent="SelectorComposite/SequenceComposite"]
+script = ExtResource("7_4k3ve")
+
+[node name="WalkToFabricator" type="Node" parent="SelectorComposite/SequenceComposite"]
+script = ExtResource("6_runwu")

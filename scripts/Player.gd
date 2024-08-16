@@ -1,12 +1,8 @@
 extends CharacterBody2D
 
 @export var speed := 400
-@export var jump_velocity := -400
 
 @export var player_gun:GenericFirearm
-
-@export var gravity_scale := 1
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var interactable_object
 
@@ -14,19 +10,11 @@ func _ready():
 	add_to_group("Player", true)
 
 func _physics_process(delta):
-	var direction = Input.get_axis("left", "right")
+	var direction = Input.get_vector("left", "right", "up", "down")
 	if direction:
-		position.x += direction * speed * delta
+		position += direction * speed * delta
 	
 	do_visuals(get_local_mouse_position().normalized())
-	
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	
-	# jump control
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = jump_velocity
-	
 	move_and_slide()
 
 func _process(_delta):
@@ -40,6 +28,8 @@ func _process(_delta):
 			if interactable_object.has_method("is_player_present"):
 				if interactable_object.is_player_present():
 					interactable_object.toggle_ui()
+	if Input.is_action_just_pressed("AI TEST"):
+		get_tree().reload_current_scene()
 
 func set_interactable_object(body):
 	interactable_object = body

@@ -17,7 +17,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swotc"]
 size = Vector2(180, 126)
 
-[node name="Industrial Fabricator" type="Area2D"]
+[node name="Industrial Fabricator" type="Area2D" groups=["Fabricators"]]
 script = ExtResource("1_rfuvy")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]

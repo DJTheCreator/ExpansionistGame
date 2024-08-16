@@ -1,13 +1,14 @@
-class_name Drill extends StaticBody2D
+class_name Drill extends GenericBuilding
 
 var is_repaired = true
 var stored_ore:int = 0
 var max_ore:int = 10
 
-func _ready():
-	ActiveBuildings.Drills.append(self)
+func _on_body_exited(body):
+	super._on_body_exited(body)
 
-func _process(_delta):
+func _process(delta):
+	super._process(delta)
 	if is_repaired and $ReleaseOre.is_stopped():
 		$ReleaseOre.start()
 	if stored_ore == max_ore:
@@ -24,5 +25,6 @@ func has_ore():
 
 func take_ore(actor, amount=1):
 	stored_ore -= amount
-	print(actor + " took " + str(amount) + " ore")
-	#TODO give actor amount ore for holding/inventory
+	print(actor.name + " took " + str(amount) + " ore")
+	var ore = load("res://scenes/Items/GenericOre.tscn").instantiate()
+	actor.held_item = ore

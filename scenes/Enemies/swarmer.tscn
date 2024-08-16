@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://cp81r0vltsrmk"]
 
-[ext_resource type="Script" path="res://scripts/Enemies/Swarmer.gd" id="1_pq1mj"]
+[ext_resource type="Script" path="res://scripts/Entities/Enemies/Swarmer.gd" id="1_pq1mj"]
 [ext_resource type="Texture2D" uid="uid://4ncd25cxvn17" path="res://assets/Green_Wizard.png" id="1_u8ye5"]
 [ext_resource type="Texture2D" uid="uid://f5h752nldi7c" path="res://assets/Green Wizard Walk.png" id="2_l0va6"]
 

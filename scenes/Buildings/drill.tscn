@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceo4422vseqbl"]
+[gd_scene load_steps=5 format=3 uid="uid://ceo4422vseqbl"]
 
 [ext_resource type="Texture2D" uid="uid://qojfuvnnicf2" path="res://assets/Drill.png" id="1_tcqrl"]
 [ext_resource type="Script" path="res://scripts/Buildings/Drill.gd" id="1_umnh3"]
@@ -14,14 +14,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Drill" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjs8b"]
+size = Vector2(146, 147)
+
+[node name="Drill" type="Area2D" groups=["Buildings", "Drills"]]
 script = ExtResource("1_umnh3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ypuju")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-28, -38, -32, 28, -46, 38, -57, 54, -58, 64, 58, 64, 53, 50, 42, 36, 23, 33, 18, -39)
 
 [node name="ReleaseOre" type="Timer" parent="."]
 process_callback = 0
@@ -36,5 +36,9 @@ scroll_active = false
 shortcut_keys_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
+
+[node name="DetectionArea" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_rjs8b")
 
 [connection signal="timeout" from="ReleaseOre" to="." method="_on_release_ore_timeout"]
