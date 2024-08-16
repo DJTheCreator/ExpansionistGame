@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://jx67ym4bpusd"]
+[gd_scene load_steps=10 format=3 uid="uid://jx67ym4bpusd"]
 
 [ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_mle7q"]
 [ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector.gd" id="2_nr2m4"]
@@ -8,11 +8,12 @@
 [ext_resource type="Script" path="res://scripts/AI/actions/GatherFromDrill.gd" id="5_y1we3"]
 [ext_resource type="Script" path="res://scripts/AI/actions/WalkToFabricator.gd" id="6_runwu"]
 [ext_resource type="Script" path="res://scripts/AI/conditions/HasHeldItem.gd" id="7_4k3ve"]
+[ext_resource type="Script" path="res://scripts/AI/actions/DepositInFabricator.gd" id="9_qxga1"]
 
 [node name="GenericSurvivorAi" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_mle7q")
-blackboard = NodePath("@Node@17599")
-actor = NodePath("")
+blackboard = NodePath("@Node@18061")
+actor = NodePath("..")
 
 [node name="SelectorComposite" type="Node" parent="."]
 script = ExtResource("2_nr2m4")
@@ -34,3 +35,6 @@ script = ExtResource("7_4k3ve")
 
 [node name="WalkToFabricator" type="Node" parent="SelectorComposite/SequenceComposite"]
 script = ExtResource("6_runwu")
+
+[node name="DepositInFabricator" type="Node" parent="SelectorComposite/SequenceComposite"]
+script = ExtResource("9_qxga1")

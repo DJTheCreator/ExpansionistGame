@@ -28,6 +28,11 @@ func is_survivor_present():
 	return survivor_present
 
 func _on_body_exited(body):
-	player.set_interactable_object(null)
-	player = null
-	player_present = false
+	if body.is_in_group("Player"):
+		player.set_interactable_object(null)
+		player = null
+		player_present = null
+	if body.is_in_group("Survivors"):
+		survivor.set_interactable_object(null)
+		survivor = null
+		survivor_present = null

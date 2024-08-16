@@ -26,7 +26,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("interact"):
 		if interactable_object:
 			if interactable_object.has_method("is_player_present"):
-				if interactable_object.is_player_present():
+				if interactable_object.is_player_present() and interactable_object.has_method("toggle_ui"):
 					interactable_object.toggle_ui()
 	if Input.is_action_just_pressed("AI TEST"):
 		get_tree().reload_current_scene()

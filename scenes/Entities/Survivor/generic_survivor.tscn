@@ -64,9 +64,10 @@ debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(0.891497, 0.000641872, 0.89197, 1)
 
-[node name="AgentAI" parent="." node_paths=PackedStringArray("blackboard") instance=ExtResource("3_s1bec")]
+[node name="AgentAI" parent="." node_paths=PackedStringArray("blackboard", "actor") instance=ExtResource("3_s1bec")]
 actor_node_path = NodePath("..")
 blackboard = NodePath("../Blackboard")
+actor = NodePath("..")
 
 [node name="Blackboard" type="Node" parent="."]
 script = ExtResource("4_ovak1")

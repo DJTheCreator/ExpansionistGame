@@ -1,4 +1,4 @@
-class_name DrillAction extends ActionLeaf
+class_name BuildingAction extends ActionLeaf
 
 func find_closest(target_group:String, actor:GenericSurvivor, blackboard:Blackboard):
 	var target

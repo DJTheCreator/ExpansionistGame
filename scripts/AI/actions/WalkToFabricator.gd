@@ -1,4 +1,4 @@
-class_name WalkToFabricator extends DrillAction
+class_name WalkToFabricator extends BuildingAction
 
 func tick(actor:Node, blackboard:Blackboard):
 	var target = find_closest("Fabricators", actor, blackboard)
